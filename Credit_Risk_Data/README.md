@@ -28,6 +28,6 @@ Transparency and governance
 Adapt credit limits to boost customer loyalty
 Use risk-based pricing to win the business
 More effectively up-sell/cross-sell credit risk products
-•	You could use standard tactics for expanding your share of a customer’s wallet, such as promoting a credit card when selling a mortgage or car loan. Or think more creatively. Use analytics to understand which credit cards to sell to specific customers based on their unique characteristics and what that might tell you about their rewards preferences. The frequent traveler may be more receptive to a card with air miles, the shopper more inclined to choose a card that offers discounts with partner retailers, the saving and investing types might prefer cash-back rewards.
+- You could use standard tactics for expanding your share of a customer’s wallet, such as promoting a credit card when selling a mortgage or car loan. Or think more creatively. Use analytics to understand which credit cards to sell to specific customers based on their unique characteristics and what that might tell you about their rewards preferences. The frequent traveler may be more receptive to a card with air miles, the shopper more inclined to choose a card that offers discounts with partner retailers, the saving and investing types might prefer cash-back rewards.
 Proactively manage the portfolio of business loans
 Exploit machine learning in novel ways
