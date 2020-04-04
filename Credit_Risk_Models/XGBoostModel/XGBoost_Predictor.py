@@ -4,6 +4,7 @@ import pandas as pd
 import argparse
 from sklearn.preprocessing import LabelEncoder
 from sklearn.base import BaseEstimator, TransformerMixin
+from sklearn.metrics import accuracy_score
 import pickle
 
 #cleaning of data
@@ -56,7 +57,9 @@ def read_csv(csvfile):
 def main():
     parser = argparse.ArgumentParser(description='Predict data using trained model')
     parser.add_argument('csvfile', type=argparse.FileType('r'), help='Input csv file')
-    #parser.add_argument('results', type=argparse.FileType('r'), help='Input results file')
+    parser.add_argument("--accuracy", help="use accuracy metric",
+                    action="store_true")
+    parser.add_argument('resultsFile', type=argparse.FileType('r'), help='Input results file')
     args = parser.parse_args()
     
     print('main(): type(args.csvfile)) = {}'.format(args.csvfile))
@@ -75,9 +78,12 @@ def main():
     #prediction
     data = data_Clean.transform(data)
     data = burota_selection.transform(data)
-    values = XGBoost_model.predict(data)
-    print("writing predicted values to predicted_values.csv ...")
-    values.tofile('predicted_values.csv',sep=',',format='%10.5f')
+    predicted_values = pd.DataFrame(XGBoost_model.predict(data))
+    expected_values = pd.read_csv(args.resultsFile)
+    print("calculating metric...")
+    if args.accuracy:
+        accuracy = accuracy_score(expected_values, predicted_values)
+        print("Accuracy: %.2f%%" % (accuracy * 100.0))
     print("done!")
 
 
