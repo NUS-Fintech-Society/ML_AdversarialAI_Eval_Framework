@@ -17,3 +17,6 @@ The output on command line will show the accuracy of predicted values by the mod
 
 ### Sample Datasets
 In the `sample datasets` folder, it contains sample datasets which is extracted from `Credit_Risk_Data` dataset. The dataset contains 20,000 rows and contains `x_test.csv` file which contains values for the model to predict, and `y_test.csv` file that contains actual target values for computation of model accuracy.
+
+### XGBoost folder
+Files in this folder are used to craft adversarial samples. Please use this file for research on adversarial attacks on XGBoost model.
