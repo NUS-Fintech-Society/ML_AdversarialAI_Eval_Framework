@@ -19,6 +19,7 @@ class dataClean:
         output = X.copy()
         output = output.drop(['home_ownership', 'income_category','term', 'application_type','purpose','interest_payments','loan_condition'], axis = 1)
         output['issue_d'] = output['issue_d'].str.replace(r'\D', '')
+        output['issue_d']=pd.to_numeric(output.issue_d)
         labelencoder = LabelEncoder()
         output['region'] = labelencoder.fit_transform(output['region'])
         return output
@@ -54,7 +55,7 @@ def read_csv(csvfile):
 
     return foo_df
 
-class DataTransform:
+class DataTransform2:
     def __init__(self):
         pass  
 
